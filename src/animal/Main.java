@@ -114,6 +114,10 @@ public class Main{
 		List<AbstractAnimal> oldAlphabetList = filterAnimal(animalList, (a) -> a.getYear() == 1758);
 		oldAlphabetList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
 		System.out.println(oldAlphabetList);
-		
+
+		System.out.println("\n*** Mammals listed alphabetically ***");
+		List<AbstractAnimal> mammalAlphList = filterAnimal(animalList, (a) -> a.getClassification() == "Mammal");
+		mammalAlphList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+		System.out.println(mammalAlphList);
 	}
 }
